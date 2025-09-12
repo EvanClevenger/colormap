@@ -51,6 +51,12 @@ let subscriptions: (() => void)[] = [];
  * @todo support other tiles/base layers
  */
 export const initMapAndLayers = async (mapContainer: HTMLDivElement) => {
+	// console.log('initMapAndLayers called');
+	// console.log('Container dimensions:', mapContainer.offsetWidth, mapContainer.offsetHeight);
+	// if (mapContainer.offsetWidth === 0 || mapContainer.offsetHeight === 0) {
+	// 	console.warn('Map container has zero dimensions—Leaflet will not render');
+	// }
+
 	const L = await import('leaflet'); // lazy import to avoid SSR
 	await import('leaflet/dist/leaflet.css');
 
