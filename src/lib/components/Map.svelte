@@ -16,7 +16,7 @@
 	onMount(async () => {
 		// initialize map and layers
 		try {
-			await initMapAndLayers(mapContainer); // this await is crashing the app
+			initMapAndLayers(mapContainer); // this await is crashing the app
 			await tick()
 		} catch (error) {
 			console.log(`map failed to load : ${error}`);

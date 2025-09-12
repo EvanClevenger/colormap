@@ -7,6 +7,7 @@
 	import { legendStore } from '$lib/stores';
 	import { LegendItem } from '$lib/types';
 	import { SettingsModal } from '$lib/components';
+	import darkmode from '$lib/services/darkMode'
 
 	let settingsModalOpen: boolean = false;
 </script>
@@ -36,6 +37,16 @@
 	>
 		<i class="fa-solid fa-arrow-rotate-right"></i>
 		<span>Clear</span>
+	</button>
+	<button
+		class="cursor-pointer rounded-sm p-1 px-2 text-white-400 transition-all duration-300 ease-in-out hover:bg-gray-400 hover:text-white"
+		on:click={() => {
+			// legendStore.clearItems(); darkmode func goes here
+			darkmode()
+		}}
+	>
+		<i class="fa-solid fa-lightbulb"></i>
+		<span>Dark Mode</span>
 	</button>
 </div>
 
